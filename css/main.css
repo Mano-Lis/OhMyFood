@@ -78,6 +78,9 @@ header > a {
   box-shadow: 3px 5px 5px rgb(216, 216, 216);
   background-color: #f9f9f9;
 }
+.working-guide-widget:hover {
+  background-color: #ffe9f9;
+}
 
 body {
   box-sizing: border-box;
