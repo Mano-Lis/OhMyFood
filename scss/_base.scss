@@ -2,6 +2,7 @@ body
 {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Roboto';
 }
 
 header
@@ -15,4 +16,54 @@ header > img
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+article a
+{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+}
+
+footer
+{
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+footer h4
+{
+    padding-left: 5%;
+    margin: 0;
+    padding-top: 5%;
+    font-family: 'Shrikhand', sans-serif;
+}
+
+footer ul
+{
+    padding-left: 5%;
+    margin-bottom: 0;
+    padding-bottom: 5%;
+}
+
+footer li
+{
+    list-style: none;
+    padding-bottom: 2%;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: white;
+}
+
+footer i 
+{
+    min-width: 20px;
+}
+
+footer span
+{
+    margin-right: 2%;
 }

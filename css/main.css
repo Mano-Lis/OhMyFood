@@ -4,7 +4,7 @@ header > a {
 }
 
 .top-container {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   padding-bottom: 10%;
 }
 
@@ -52,8 +52,18 @@ header > a {
   box-shadow: -3px 5px 5px rgb(216, 216, 216), 3px 5px 5px rgb(216, 216, 216);
 }
 
+.working-section {
+  margin-top: 10%;
+}
+
+.working-section > h2 {
+  margin-bottom: 7%;
+  margin-left: 6%;
+}
+
 .working-logos {
   margin-right: 7%;
+  color: #8b8b8b;
 }
 
 .number {
@@ -63,16 +73,18 @@ header > a {
   min-height: 25px;
   min-width: 25px;
   border-radius: 25px;
+  margin-left: -5px;
   background-color: #9356DC;
   color: white;
+  margin-right: 7%;
 }
 
 .working-guide-widget {
   display: flex;
   align-items: center;
   margin-top: 4%;
-  margin-left: 5%;
-  margin-right: 3%;
+  margin-left: 6%;
+  margin-right: 4%;
   border-radius: 20px;
   height: 85px;
   box-shadow: 3px 5px 5px rgb(216, 216, 216);
@@ -81,10 +93,103 @@ header > a {
 .working-guide-widget:hover {
   background-color: #ffe9f9;
 }
+.working-guide-widget:hover > .working-logos {
+  color: #9356DC;
+}
+
+.restaurant-section {
+  background-color: #f7f7f7;
+  margin-top: 15%;
+  padding-bottom: 12%;
+}
+
+.restaurant-section > h2 {
+  padding-top: 10%;
+  margin-left: 5%;
+}
+
+.restaurant-widget {
+  box-shadow: 0px 0px 5px rgb(223, 212, 212);
+  border-radius: 25px;
+  background: white;
+  overflow: hidden;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+.restaurant-widget img {
+  height: 200px;
+  -o-object-position: 20% 80%;
+     object-position: 20% 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+#vertical-picture img {
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
+}
+
+.restaurant-infos {
+  margin-left: 5%;
+}
+
+.restaurant-infos h3 {
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+
+.restaurant-infos h4 {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 3%;
+}
+
+.new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: auto;
+  position: absolute;
+  margin-right: 4%;
+  margin-top: 4%;
+  right: 5%;
+  height: 35px;
+  width: 20%;
+  background-color: #99E2D0;
+  color: #217460;
+}
+
+.heart-logo {
+  display: block;
+  position: relative;
+  bottom: 40px;
+  left: 85%;
+}
+.heart-logo:hover {
+  color: white;
+  background-color: black;
+}
+
+.heart-full-logo {
+  text-shadow: 0 0 3px black;
+  display: block;
+  position: relative;
+  bottom: 40px;
+  left: 85%;
+  color: white;
+}
+.heart-full-logo:hover {
+  color: #9356DC;
+}
 
 body {
   box-sizing: border-box;
   margin: 0;
+  font-family: "Roboto";
 }
 
 header {
@@ -96,4 +201,46 @@ header > img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+article a {
+  text-decoration: none;
+  color: black;
+  height: 100%;
+}
+
+footer {
+  background-color: rgb(51, 51, 51);
+  color: white;
+}
+
+footer h4 {
+  padding-left: 5%;
+  margin: 0;
+  padding-top: 5%;
+  font-family: "Shrikhand", sans-serif;
+}
+
+footer ul {
+  padding-left: 5%;
+  margin-bottom: 0;
+  padding-bottom: 5%;
+}
+
+footer li {
+  list-style: none;
+  padding-bottom: 2%;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer i {
+  min-width: 20px;
+}
+
+footer span {
+  margin-right: 2%;
 }/*# sourceMappingURL=main.css.map */
