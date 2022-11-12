@@ -27,16 +27,17 @@
     margin-top: 0;
 }
 
-.presentation h1
+.presentation
 {
-    padding-top: 30px;
-    margin-left: 16%;
-    margin-right: 16%;
-}
+    h1 {
+        padding-top: 30px;
+        margin-left: 16%;
+        margin-right: 16%;
+    }
 
-.presentation h2
-{
-    font-weight: normal;
+    h2 {
+        font-weight: normal;
+    }
 }
 
 .explore-btn
@@ -101,12 +102,11 @@
     background-color: $color-section-background;
     margin-top: 15%;
     padding-bottom: 12%;
-}
 
-.restaurant-section > h2
-{
-    padding-top: 10%;
+    h2 {
+        padding-top: 10%;
     margin-left: 5%;
+    }
 }
 
 .restaurant-widget
@@ -118,16 +118,16 @@
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 5%;;
-}
-
-.restaurant-widget img
-{
-    height: 200px;
+    margin-bottom: 5%;
+    
+    img {
+        height: 200px;
     object-position: 20% 80%;
     object-fit: cover;
     width: 100%;
+    }
 }
+
 
 #vertical-picture img
 {
@@ -137,20 +137,18 @@
 .restaurant-infos 
 {
     margin-left: 5%;
-}
 
-.restaurant-infos h3
-{
+  h3 {
     margin-top: 4%;
     margin-bottom: 2%;
-}
+  }
 
-.restaurant-infos h4
-{
+  h4 {
     font-weight: normal;
     margin-top: 0;
     margin-bottom: 3%;
-}
+  }
+}  
 
 .new 
 {
@@ -168,29 +166,32 @@
     color: darken($color: $color-tertiary, $amount: 45%);
 }
 
-.heart-logo
+.heart-logos 
 {
-    display:block;
     position: relative;
     bottom: 40px;
     left: 85%;
-    &:hover {
-        color: white;
-        background-color: black;
+    &:hover > .heart-logo {
+        display: none;
     }
+    &:hover > .heart-full-logo {
+        display: block;
+/*        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        background: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
+        height: 24px; */
+        color: $color-primary;
+    }
+}
+
+.heart-logo
+{
+    display: block;
 }
 
 .heart-full-logo
 {
-    text-shadow: 0 0 3px black;
-    display:block;
-    position: relative;
-    bottom: 40px;
-    left: 85%;
-    color: white;
-    &:hover {
-        color: $color-primary;
-    }
+    display: none;
 }
 
 

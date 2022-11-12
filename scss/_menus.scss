@@ -1,11 +1,13 @@
-header > a
+header
 {
+    a {
     float: left;
     margin-right: -40px;
     color: black;
     position: absolute;
     top: 27px;
     left: 10px;
+    }
 }
 
 .restaurant-infos-container
@@ -14,13 +16,15 @@ header > a
     background-color: $color-section-background;
     overflow: hidden;
     position: relative;
-    bottom: 50px;
-}
-
-.restaurant-infos-container h2
-{
-    margin-left: 5%;
-    margin-top: 10%;
+    margin-top: -50px;
+    z-index: 2;
+    padding-bottom: 8%;
+    
+    h2 {
+        margin-left: 5%;
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }
 }
 
 main img
@@ -29,13 +33,15 @@ main img
     width: 100%;
 }
 
-.restaurant-headers h1
+#vertical-background-image-container
 {
-    font-family: 'Shrikhand';
-    font-weight: 500;
-    margin-left: 4%;
-    margin-top: 5%;
-    font-size: xx-large;
+    height: 300px;
+    width: 100%;
+}
+
+#vertical-background-image
+{
+    object-fit: cover;
 }
 
 .restaurant-headers
@@ -43,11 +49,28 @@ main img
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    h1 {
+        font-family: 'Shrikhand';
+        font-weight: 500;
+        margin-left: 4%;
+        margin-top: 5%;
+        font-size: xx-large;
+    }
+
+    i {
+        margin-right: 10%;
+    }
 }
 
-.restaurant-headers i
+.green-underline 
 {
-    margin-right: 10%;
+    display: block;
+    height: 5px;
+    width: 15%;
+    background-color: $color-tertiary;
+    margin-bottom: 3%;
+    margin-left: 5%;;
 }
 
 .menu-widget
@@ -64,30 +87,31 @@ main img
     border-radius: 20px;
 }
 
-.menu-widget b
-{
-    margin-top: 9%;
-    margin-right: 5%;
-}
-
 .menu-widget-infos
 {
     width: 90%;
+
+    h3 {
+        margin-top: 8px;
+        margin-bottom: 2%;
+        margin-left: 3%;
+    }
+
+    h4 {
+        margin-top: 0;
+        margin-bottom: 2%;
+        font-weight: normal;
+        margin-left: 3%;
+    }
 }
 
-.menu-widget-infos h3
+.pricing 
 {
-    margin-top: 8px;
-    margin-bottom: 2%;
-    margin-left: 3%;
-}
-
-.menu-widget-infos h4
-{
-    margin-top: 0;
-    margin-bottom: 2%;
-    font-weight: normal;
-    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 7%;
+    margin-bottom: 3%;
 }
 
 .btn-command
