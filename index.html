@@ -24,7 +24,7 @@
             <div class="presentation">
                 <h1>Réservez le menu qui vous convient</h1>
                 <h2>Découvrez des restaurants d'exception, sélctionnés par nos soins</h2>
-                <button class="explore-btn">Explorer nos restaurants</button>
+                <a href="#target-restaurant"><button class="explore-btn">Explorer nos restaurants</button></a>
             </div>
         </div>
         <section class="working-section">
@@ -45,72 +45,74 @@
                 <h2>Dégustez au restaurant</h2>
             </div>
         </section>
-        <section class="restaurant-section">
+        <section class="restaurant-section" id="target-restaurant">
             <h2>Restaurants</h2>
-            <article class="restaurant-widget">
-                <a href="la_palette_du_gout.html">
-                    <div class="new">
-                        Nouveau
+            <div class="restaurant-widget-box">
+                <article class="restaurant-widget">
+                    <a href="la_palette_du_gout.html">
+                        <div class="new">
+                            Nouveau
+                        </div>
+                        <img src="./assets/images/palette_du_gout.jpg" alt="">
+                        <div class="restaurant-infos">
+                            <h3>La palette du goût</h3>
+                            <h4>Ménilmontant</h4>
+                        </div>  
+                    </a>
+                    <div class="heart-logos">
+                        <i class="fa-solid fa-heart fa-xl heart-full-logo"></i>
+                        <i class="fa-regular fa-heart fa-xl heart-logo"></i>
                     </div>
-                    <img src="./assets/images/palette_du_gout.jpg" alt="">
-                    <div class="restaurant-infos">
-                        <h3>La palette du goût</h3>
-                        <h4>Ménilmontant</h4>
-                    </div>  
-                </a>
-                <div class="heart-logos">
-                    <i class="fa-solid fa-heart fa-xl heart-full-logo"></i>
-                    <i class="fa-regular fa-heart fa-xl heart-logo"></i>
-                </div>
-            </article>
-            <article id="vertical-picture" class="restaurant-widget">
-                <a href="la_note_enchantee.html">
-                    <div class="new">
-                        Nouveau
-                    </div>
-                    <img src="./assets/images/note_enchantee.jpg" alt="">
-                    <div class="restaurant-infos">
-                        <div class="restaurant-infos-title">
-                            <h3>La note enchantée</h3>
-                            <h4>Charonne</h4>
+                </article>
+                <article id="vertical-picture" class="restaurant-widget">
+                    <a href="la_note_enchantee.html">
+                        <div class="new">
+                            Nouveau
                         </div>
-                        <div class="heart-logos">
-                            <i class="fa-solid fa-heart fa-xl heart-full-logo"></i>
-                            <i class="fa-regular fa-heart fa-xl heart-logo"></i>
+                        <img src="./assets/images/note_enchantee.jpg" alt="">
+                        <div class="restaurant-infos">
+                            <div class="restaurant-infos-title">
+                                <h3>La note enchantée</h3>
+                                <h4>Charonne</h4>
+                            </div>
+                            <div class="heart-logos">
+                                <i class="fa-solid fa-heart fa-xl heart-full-logo"></i>
+                                <i class="fa-regular fa-heart fa-xl heart-logo"></i>
+                            </div>
+                        </div>  
+                    </a>
+                </article>
+                <article class="restaurant-widget">
+                    <a href="a_la_francaise.html">
+                        <img src="./assets/images/a_la_francaise.jpg" alt="">
+                        <div class="restaurant-infos">
+                            <div class="restaurant-infos-title">
+                                <h3>À la française</h3>
+                                <h4>Cité Rouge</h4>
+                            </div>
+                            <div class="heart-logos">
+                                <i class="fa-solid fa-heart fa-xl heart-full-logo"></i>
+                                <i class="fa-regular fa-heart fa-xl heart-logo"></i>
+                            </div>
+                        </div>  
+                    </a>
+                </article>
+                <article class="restaurant-widget">
+                    <a href="le_delice_des_sens.html">
+                        <img src="./assets/images/delice_des_sens.jpg" alt="">
+                        <div class="restaurant-infos">
+                            <div class="restaurant-infos-title">
+                                <h3>Le délice des sens</h3>
+                                <h4>Folie-Méricourt</h4>
+                            </div>
+                            <div class="heart-logos">
+                                <i class="fa-solid fa-heart fa-xl heart-full-logo"></i>
+                                <i class="fa-regular fa-heart fa-xl heart-logo"></i>
+                            </div>
                         </div>
-                    </div>  
-                </a>
-            </article>
-            <article class="restaurant-widget">
-                <a href="a_la_francaise.html">
-                    <img src="./assets/images/a_la_francaise.jpg" alt="">
-                    <div class="restaurant-infos">
-                        <div class="restaurant-infos-title">
-                            <h3>À la française</h3>
-                            <h4>Cité Rouge</h4>
-                        </div>
-                        <div class="heart-logos">
-                            <i class="fa-solid fa-heart fa-xl heart-full-logo"></i>
-                            <i class="fa-regular fa-heart fa-xl heart-logo"></i>
-                        </div>
-                    </div>  
-                </a>
-            </article>
-            <article class="restaurant-widget">
-                <a href="le_delice_des_sens.html">
-                    <img src="./assets/images/delice_des_sens.jpg" alt="">
-                    <div class="restaurant-infos">
-                        <div class="restaurant-infos-title">
-                            <h3>Le délice des sens</h3>
-                            <h4>Folie-Méricourt</h4>
-                        </div>
-                        <div class="heart-logos">
-                            <i class="fa-solid fa-heart fa-xl heart-full-logo"></i>
-                            <i class="fa-regular fa-heart fa-xl heart-logo"></i>
-                        </div>
-                    </div>
-                </a>
-            </article>
+                    </a>
+                </article>
+            </div>
         </section>
     </main>
     <footer>

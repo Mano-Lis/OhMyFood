@@ -108,6 +108,7 @@ main img {
   border: none;
   border-radius: 30px;
   box-shadow: -3px 5px 5px rgb(216, 216, 216), 3px 5px 5px rgb(216, 216, 216);
+  cursor: pointer;
   width: 40%;
   margin-top: 8%;
 }
@@ -146,6 +147,11 @@ main img {
   font-weight: normal;
 }
 
+.presentation a {
+  text-decoration: none;
+  color: white;
+}
+
 .explore-btn {
   display: block;
   margin-left: auto;
@@ -156,8 +162,14 @@ main img {
   border: none;
   border-radius: 30px;
   box-shadow: -3px 5px 5px rgb(216, 216, 216), 3px 5px 5px rgb(216, 216, 216);
+  cursor: pointer;
   margin-top: 8%;
   width: 50%;
+}
+@media (min-width: 768px) {
+  .explore-btn {
+    width: 30%;
+  }
 }
 
 .working-section {
@@ -214,6 +226,16 @@ main img {
   padding-top: 10%;
   margin-left: 5%;
 }
+@media (min-width: 768px) {
+  .restaurant-section h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    padding-top: 5%;
+    padding-bottom: 4%;
+  }
+}
 
 .restaurant-widget {
   box-shadow: 0px 0px 5px rgb(223, 212, 212);
@@ -232,6 +254,23 @@ main img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .restaurant-widget {
+    width: 44%;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+@media (min-width: 768px) {
+  .restaurant-widget:nth-child(2n) .new {
+    left: 80%;
+  }
+}
+
+.restaurant-widget-box {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #vertical-picture img {
@@ -266,6 +305,12 @@ main img {
   background-color: #99E2D0;
   color: #217460;
 }
+@media (min-width: 768px) {
+  .new {
+    left: 30%;
+    width: 12%;
+  }
+}
 
 .heart-logos {
   position: relative;
@@ -283,7 +328,6 @@ main img {
           height: 24px; */
   color: #9356DC;
 }
-
 .heart-logo {
   display: block;
 }
