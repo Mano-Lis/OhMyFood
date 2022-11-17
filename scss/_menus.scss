@@ -103,6 +103,7 @@ main img
     margin-left: 5%;;
 }
 
+
 .menu-widget
 {
     height: 70px;
@@ -115,9 +116,25 @@ main img
     margin-right: auto;
     box-shadow: 3px 5px 5px rgb(216, 216, 216);
     border-radius: 20px;
-
+    opacity: 0;
     @media (min-width: $tablet) {
         width: 60%;
+    }
+
+    &__first {
+        animation: cascade 500ms 500ms forwards;
+    }
+
+    &__second {
+        animation: cascade 500ms 600ms forwards;
+    }
+
+    &__third {
+        animation: cascade 500ms 700ms forwards;
+    }
+
+    &__fourth {
+        animation: cascade 500ms 800ms forwards;
     }
 }
 
