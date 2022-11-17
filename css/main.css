@@ -26,10 +26,22 @@ main img {
   height: 300px;
   width: 100%;
 }
+@media (min-width: 768px) {
+  main img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 500px;
+  }
+}
 
 #vertical-background-image-container {
   height: 300px;
   width: 100%;
+}
+@media (min-width: 768px) {
+  #vertical-background-image-container {
+    height: 500px;
+  }
 }
 
 #vertical-background-image {
@@ -48,9 +60,24 @@ main img {
   margin-left: 4%;
   margin-top: 5%;
   font-size: xx-large;
+  margin-bottom: 0;
 }
 .restaurant-headers i {
   margin-right: 10%;
+}
+
+@media (min-width: 768px) {
+  .menu-part-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .menu-part-header h2, .menu-part-header .green-underline {
+    margin-left: 0;
+  }
 }
 
 .green-underline {
@@ -73,6 +100,11 @@ main img {
   margin-right: auto;
   box-shadow: 3px 5px 5px rgb(216, 216, 216);
   border-radius: 20px;
+}
+@media (min-width: 768px) {
+  .menu-widget {
+    width: 60%;
+  }
 }
 
 .menu-widget-infos {
@@ -111,6 +143,11 @@ main img {
   cursor: pointer;
   width: 40%;
   margin-top: 8%;
+}
+@media (min-width: 768px) {
+  .btn-command {
+    width: 25%;
+  }
 }
 
 .top-container {

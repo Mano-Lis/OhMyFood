@@ -31,12 +31,21 @@ main img
 {
     height: 300px;
     width: 100%;
+
+    @media (min-width: 768px) {
+        object-fit: cover;
+        height: 500px;
+    }
 }
 
 #vertical-background-image-container
 {
     height: 300px;
     width: 100%;
+
+    @media(min-width: 768px) {
+        height: 500px;
+    }
 }
 
 #vertical-background-image
@@ -56,10 +65,27 @@ main img
         margin-left: 4%;
         margin-top: 5%;
         font-size: xx-large;
+        margin-bottom: 0;
     }
 
     i {
         margin-right: 10%;
+    }
+}
+
+.menu-part-header
+{
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2, .green-underline{
+        @media (min-width: 768px) {
+            margin-left: 0;
+        }
     }
 }
 
@@ -85,6 +111,10 @@ main img
     margin-right: auto;
     box-shadow: 3px 5px 5px rgb(216, 216, 216);
     border-radius: 20px;
+
+    @media (min-width: 768px) {
+        width: 60%;
+    }
 }
 
 .menu-widget-infos
@@ -119,6 +149,10 @@ main img
     @include btn-gradient;
     width: 40%;
     margin-top: 8%;
+
+    @media (min-width: 768px) {
+        width: 25%;
+    }
 }
 
 
