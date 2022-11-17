@@ -2,11 +2,10 @@ header
 {
     a {
     float: left;
-    margin-right: -40px;
     color: black;
     position: absolute;
-    top: 27px;
-    left: 10px;
+    top: 10%;
+    left: 2%;
     }
 }
 
@@ -32,7 +31,7 @@ main img
     height: 300px;
     width: 100%;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
         object-fit: cover;
         height: 500px;
     }
@@ -43,14 +42,19 @@ main img
     height: 300px;
     width: 100%;
 
-    @media(min-width: 768px) {
-        height: 500px;
+    @media(min-width: $tablet) {
+        height: 600px;
     }
 }
 
 #vertical-background-image
 {
     object-fit: cover;
+    object-position: 37% 63%;
+
+    @media(min-width: $tablet) {
+        height: 600px;
+    }
 }
 
 .restaurant-headers
@@ -112,7 +116,7 @@ main img
     box-shadow: 3px 5px 5px rgb(216, 216, 216);
     border-radius: 20px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
         width: 60%;
     }
 }
@@ -150,8 +154,12 @@ main img
     width: 40%;
     margin-top: 8%;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
         width: 25%;
+    }
+
+    @media (min-width: $desktop) {
+        width: 20%;
     }
 }
 

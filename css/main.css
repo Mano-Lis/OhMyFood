@@ -1,10 +1,9 @@
 header a {
   float: left;
-  margin-right: -40px;
   color: black;
   position: absolute;
-  top: 27px;
-  left: 10px;
+  top: 10%;
+  left: 2%;
 }
 
 .restaurant-infos-container {
@@ -40,13 +39,20 @@ main img {
 }
 @media (min-width: 768px) {
   #vertical-background-image-container {
-    height: 500px;
+    height: 600px;
   }
 }
 
 #vertical-background-image {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 37% 63%;
+     object-position: 37% 63%;
+}
+@media (min-width: 768px) {
+  #vertical-background-image {
+    height: 600px;
+  }
 }
 
 .restaurant-headers {
@@ -132,6 +138,8 @@ main img {
 
 .btn-command {
   display: block;
+  position: relative;
+  z-index: 1;
   margin-left: auto;
   margin-right: auto;
   background: linear-gradient(#ff93e1, #a16be0);
@@ -139,14 +147,36 @@ main img {
   color: white;
   border: none;
   border-radius: 30px;
-  box-shadow: -3px 5px 5px rgb(216, 216, 216), 3px 5px 5px rgb(216, 216, 216);
+  box-shadow: -3px 5px 5px rgb(175, 175, 175), 3px 5px 5px rgb(173, 173, 173);
   cursor: pointer;
   width: 40%;
   margin-top: 8%;
 }
+.btn-command::after {
+  background: linear-gradient(#fface8, #ae80e5);
+  box-shadow: -6px 10px 10px rgb(175, 175, 175), 6px 10px 10px rgb(173, 173, 173);
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 800ms;
+  content: "";
+}
+.btn-command:hover::after {
+  opacity: 1;
+}
 @media (min-width: 768px) {
   .btn-command {
     width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .btn-command {
+    width: 20%;
   }
 }
 
@@ -191,6 +221,8 @@ main img {
 
 .explore-btn {
   display: block;
+  position: relative;
+  z-index: 1;
   margin-left: auto;
   margin-right: auto;
   background: linear-gradient(#ff93e1, #a16be0);
@@ -198,24 +230,61 @@ main img {
   color: white;
   border: none;
   border-radius: 30px;
-  box-shadow: -3px 5px 5px rgb(216, 216, 216), 3px 5px 5px rgb(216, 216, 216);
+  box-shadow: -3px 5px 5px rgb(175, 175, 175), 3px 5px 5px rgb(173, 173, 173);
   cursor: pointer;
   margin-top: 8%;
   width: 50%;
+}
+.explore-btn::after {
+  background: linear-gradient(#fface8, #ae80e5);
+  box-shadow: -6px 10px 10px rgb(175, 175, 175), 6px 10px 10px rgb(173, 173, 173);
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 800ms;
+  content: "";
+}
+.explore-btn:hover::after {
+  opacity: 1;
 }
 @media (min-width: 768px) {
   .explore-btn {
     width: 30%;
   }
 }
+@media (min-width: 992px) {
+  .explore-btn {
+    width: 20%;
+  }
+}
 
 .working-section {
   margin-top: 10%;
 }
-
 .working-section > h2 {
   margin-bottom: 7%;
   margin-left: 6%;
+}
+@media (min-width: 992px) {
+  .working-section > h2 {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-bottom: 2%;
+  }
+}
+
+@media (min-width: 992px) {
+  .working-widgets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .working-logos {
@@ -253,6 +322,11 @@ main img {
 .working-guide-widget:hover > .working-logos {
   color: #9356DC;
 }
+@media (min-width: 992px) {
+  .working-guide-widget {
+    width: 30%;
+  }
+}
 
 .restaurant-section {
   background-color: #f7f7f7;
@@ -283,6 +357,7 @@ main img {
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 5%;
+  position: relative;
 }
 .restaurant-widget img {
   height: 200px;
@@ -299,15 +374,20 @@ main img {
     margin-right: 3%;
   }
 }
-@media (min-width: 768px) {
-  .restaurant-widget:nth-child(2n) .new {
-    left: 80%;
+@media (min-width: 992px) {
+  .restaurant-widget {
+    width: 35%;
   }
 }
 
 .restaurant-widget-box {
   display: flex;
   flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+  .restaurant-widget-box {
+    justify-content: center;
+  }
 }
 
 #vertical-picture img {
@@ -342,12 +422,6 @@ main img {
   background-color: #99E2D0;
   color: #217460;
 }
-@media (min-width: 768px) {
-  .new {
-    left: 30%;
-    width: 12%;
-  }
-}
 
 .heart-logos {
   position: relative;
@@ -365,6 +439,7 @@ main img {
           height: 24px; */
   color: #9356DC;
 }
+
 .heart-logo {
   display: block;
 }
@@ -378,10 +453,17 @@ body {
   margin: 0;
   font-family: "Roboto";
 }
+@media (min-width: 992px) {
+  body {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
 
 header {
   height: 50px;
   margin-top: 20px;
+  position: relative;
 }
 
 header > img {
@@ -430,4 +512,8 @@ footer i {
 
 footer span {
   margin-right: 2%;
-}/*# sourceMappingURL=main.css.map */
+}
+
+@-webkit-keyframes cascade {}
+
+@keyframes cascade {}/*# sourceMappingURL=main.css.map */

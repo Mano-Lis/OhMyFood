@@ -1,11 +1,33 @@
 @mixin btn-gradient {
     display: block;
+    position: relative;
+    z-index: 1;
     margin-left: auto;
     margin-right: auto;
     background: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
-    height: 50px;color: white;
+    height: 50px;
+    color: white;
     border: none;
     border-radius: 30px;
-    box-shadow: -3px 5px 5px rgb(216, 216, 216), 3px 5px 5px rgb(216, 216, 216);
+    box-shadow: -3px 5px 5px rgb(175, 175, 175), 3px 5px 5px rgb(173, 173, 173);
     cursor: pointer;
+    &::after {
+        background: linear-gradient(lighten($color-secondary, 10%), lighten($color-primary, 10%));
+        box-shadow: -6px 10px 10px rgb(175, 175, 175), 6px 10px 10px rgb(173, 173, 173);
+        border-radius: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 800ms;
+        content: "";
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
 }
