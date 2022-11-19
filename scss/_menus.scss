@@ -77,6 +77,17 @@ main img
     }
 }
 
+.starters-dishes-desserts
+{
+    @media(min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+}
+
 .menu-part-header
 {
     @media (min-width: 768px) {
@@ -108,7 +119,7 @@ main img
 {
     height: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: white;
     margin-bottom: 3%;
     width: 90%;
@@ -118,7 +129,10 @@ main img
     border-radius: 20px;
     opacity: 0;
     @media (min-width: $tablet) {
-        width: 60%;
+        min-width: 350px;
+    }
+    @media (min-width: $desktop) {
+        height: 100px;
     }
 
     &__first {
@@ -141,6 +155,9 @@ main img
 .menu-widget-infos
 {
     width: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     h3 {
         margin-top: 8px;
@@ -150,7 +167,7 @@ main img
 
     h4 {
         margin-top: 0;
-        margin-bottom: 2%;
+        margin-bottom: 0;
         font-weight: normal;
         margin-left: 3%;
     }
