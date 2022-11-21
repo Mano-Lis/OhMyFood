@@ -31,3 +31,11 @@
         }
     }
 }
+
+@mixin cascade-widget {
+    @each $key, $value in $cascade-anim {
+        &:#{$key} {
+            animation: cascade 500ms $value forwards;
+        }
+    }
+}

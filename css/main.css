@@ -64,9 +64,8 @@ main img {
   font-family: "Shrikhand";
   font-weight: 500;
   margin-left: 4%;
-  margin-top: 5%;
+  margin-top: 3%;
   font-size: xx-large;
-  margin-bottom: 0;
 }
 .restaurant-headers i {
   margin-right: 10%;
@@ -79,6 +78,29 @@ main img {
     justify-content: space-between;
     margin-right: 3%;
     margin-left: 3%;
+  }
+}
+@media (min-width: 992px) {
+  .starters-dishes-desserts {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-part {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .menu-part {
+    width: 35%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .menu-part:nth-child(3) {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -120,12 +142,7 @@ main img {
 }
 @media (min-width: 768px) {
   .menu-widget {
-    min-width: 350px;
-  }
-}
-@media (min-width: 992px) {
-  .menu-widget {
-    height: 100px;
+    margin-bottom: 10%;
   }
 }
 .menu-widget__first {
@@ -169,6 +186,11 @@ main img {
   justify-content: flex-end;
   margin-right: 7%;
   margin-bottom: 3%;
+}
+@media (min-width: 768px) {
+  .pricing {
+    margin-bottom: 4%;
+  }
 }
 
 .btn-command {

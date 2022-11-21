@@ -67,9 +67,8 @@ main img
         font-family: 'Shrikhand';
         font-weight: 500;
         margin-left: 4%;
-        margin-top: 5%;
+        margin-top: 3%;
         font-size: xx-large;
-        margin-bottom: 0;
     }
 
     i {
@@ -86,6 +85,28 @@ main img
         margin-right: 3%;
         margin-left: 3%;
     }
+
+    @media(min-width: $desktop) {
+        flex-wrap: nowrap;
+    }
+}
+
+.menu-part {
+    @media(min-width: $tablet) {
+    width: 50%;
+    }
+    @media(min-width: $desktop) {
+        width: 35%;
+    }
+}
+
+.menu-part:nth-child(3)
+{
+    @media(min-width: $tablet) and (max-width: $desktop) {
+    
+    margin-left: auto;
+    margin-right: auto;
+    }
 }
 
 .menu-part-header
@@ -98,7 +119,7 @@ main img
     }
 
     h2, .green-underline{
-        @media (min-width: 768px) {
+        @media (min-width: $tablet) {
             margin-left: 0;
         }
     }
@@ -128,33 +149,20 @@ main img
     box-shadow: 3px 5px 5px rgb(216, 216, 216);
     border-radius: 20px;
     opacity: 0;
-    @media (min-width: $tablet) {
-        min-width: 350px;
+    @media (min-width: $tablet) {    
+        margin-bottom: 10%;
     }
-    @media (min-width: $desktop) {
-        height: 100px;
-    }
-
-    &__first {
-        animation: cascade 500ms 500ms forwards;
-    }
-
-    &__second {
-        animation: cascade 500ms 600ms forwards;
-    }
-
-    &__third {
-        animation: cascade 500ms 700ms forwards;
-    }
-
-    &__fourth {
-        animation: cascade 500ms 800ms forwards;
+    
+    @each $key, $value in $cascade-anim {
+        &#{$key} {
+            animation: cascade 500ms $value forwards;
+        }
     }
 }
 
 .menu-widget-infos
 {
-    width: 90%;
+    width: calc(90%);
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -180,6 +188,9 @@ main img
     justify-content: flex-end;
     margin-right: 7%;
     margin-bottom: 3%;
+    @media(min-width: $tablet) {
+        margin-bottom: 4%;
+    }
 }
 
 .btn-command
