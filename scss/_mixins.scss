@@ -32,10 +32,9 @@
     }
 }
 
-@mixin cascade-widget {
-    @each $key, $value in $cascade-anim {
-        &:#{$key} {
-            animation: cascade 500ms $value forwards;
-        }
-    }
+@mixin text-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 2%;
 }

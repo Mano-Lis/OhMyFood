@@ -162,15 +162,13 @@ main img
 
 .menu-widget-infos
 {
-    width: calc(90%);
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    width: 90%;
 
     h3 {
         margin-top: 8px;
         margin-bottom: 2%;
         margin-left: 3%;
+        @include text-overflow;
     }
 
     h4 {
@@ -178,6 +176,7 @@ main img
         margin-bottom: 0;
         font-weight: normal;
         margin-left: 3%;
+        @include text-overflow;
     }
 }
 

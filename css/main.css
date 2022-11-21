@@ -164,20 +164,25 @@ main img {
 
 .menu-widget-infos {
   width: 90%;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .menu-widget-infos h3 {
   margin-top: 8px;
   margin-bottom: 2%;
   margin-left: 3%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 2%;
 }
 .menu-widget-infos h4 {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: normal;
   margin-left: 3%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 2%;
 }
 
 .pricing {
