@@ -7,6 +7,26 @@
     }
 }
 
+.spinner-container 
+{
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background: white;
+    animation: page-loading 3s linear forwards;
+}
+
+.spinner {
+    @include fa-gradient;
+    animation: rotating-spinner 1s linear 3;
+}
+
 .geoloc
 {
     display: flex;
@@ -246,28 +266,32 @@
     bottom: 25px;
     left: 85%;
     max-width: 32px;
-    &:hover > .heart-logo {
-        display: none;
-    }
-    &:hover > .heart-full-logo {
-        opacity: 1;
-        transition: opacity 300ms linear;
-    }
+    @include heart-anim;
+}
+
+.heart-logos-menu
+{
+    position: relative;
+    margin-right: 5%;
+    @include heart-anim;
 }
 
 .heart-logo
 {
     display: block;
+    &__menu {
+        position: relative;
+        top: -16px;
+    }
 }
 
 .heart-full-logo
 {
     display: block;
-    color: transparent;
-    background-clip: text;
-    background-image: -webkit-linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
+    @include fa-gradient;
     cursor: pointer;
     opacity: 0;
+    transform: scale(0);
 }
 
 

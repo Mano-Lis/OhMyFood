@@ -70,10 +70,13 @@ main img
         margin-top: 3%;
         font-size: xx-large;
     }
+}
 
-    i {
-        margin-right: 10%;
-    }
+.heart-logos-menu
+{
+    position: relative;
+    margin-right: 5%;
+    @include heart-anim;
 }
 
 .starters-dishes-desserts
@@ -158,12 +161,19 @@ main img
             animation: cascade 500ms $value forwards;
         }
     }
+
+    &:hover > .pricing{
+        transform: translate(-500%);
+    }
+
+    &:hover > .menu-widget-infos {
+        
+    }
 }
 
 .menu-widget-infos
 {
     width: 90%;
-
     h3 {
         margin-top: 8px;
         margin-bottom: 2%;

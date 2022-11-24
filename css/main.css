@@ -67,8 +67,18 @@ main img {
   margin-top: 3%;
   font-size: xx-large;
 }
-.restaurant-headers i {
-  margin-right: 10%;
+
+.heart-logos-menu {
+  position: relative;
+  margin-right: 5%;
+}
+.heart-logos-menu:hover > .heart-logo {
+  display: none;
+}
+.heart-logos-menu:hover > .heart-full-logo {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms 100ms;
 }
 
 @media (min-width: 768px) {
@@ -161,7 +171,9 @@ main img {
   -webkit-animation: cascade 500ms 800ms forwards;
           animation: cascade 500ms 800ms forwards;
 }
-
+.menu-widget:hover > .pricing {
+  transform: translate(-500%);
+}
 .menu-widget-infos {
   width: 90%;
 }
@@ -250,6 +262,30 @@ main img {
   .top-container {
     padding-bottom: 5%;
   }
+}
+
+.spinner-container {
+  position: fixed;
+  min-height: 100%;
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background: white;
+  -webkit-animation: page-loading 3s linear forwards;
+          animation: page-loading 3s linear forwards;
+}
+
+.spinner {
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: -webkit-linear-gradient(#ff93e1, #a16be0);
+  -webkit-animation: rotating-spinner 1s linear 3;
+          animation: rotating-spinner 1s linear 3;
 }
 
 .geoloc {
@@ -507,11 +543,29 @@ main img {
 }
 .heart-logos:hover > .heart-full-logo {
   opacity: 1;
-  transition: opacity 300ms linear;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms 100ms;
+}
+
+.heart-logos-menu {
+  position: relative;
+  margin-right: 5%;
+}
+.heart-logos-menu:hover > .heart-logo {
+  display: none;
+}
+.heart-logos-menu:hover > .heart-full-logo {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms 100ms;
 }
 
 .heart-logo {
   display: block;
+}
+.heart-logo__menu {
+  position: relative;
+  top: -16px;
 }
 
 .heart-full-logo {
@@ -522,6 +576,7 @@ main img {
   background-image: -webkit-linear-gradient(#ff93e1, #a16be0);
   cursor: pointer;
   opacity: 0;
+  transform: scale(0);
 }
 
 body {
@@ -605,5 +660,63 @@ footer span {
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes rotating-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(90deg);
+  }
+  66% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(90deg);
+  }
+  66% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes page-loading {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  99% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes page-loading {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  99% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
   }
 }/*# sourceMappingURL=main.css.map */

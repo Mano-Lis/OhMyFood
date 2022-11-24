@@ -38,3 +38,20 @@
     text-overflow: ellipsis;
     margin-right: 2%;
 }
+
+@mixin fa-gradient {
+    color: transparent;
+    background-clip: text;
+    background-image: -webkit-linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
+}
+
+@mixin heart-anim {
+    &:hover > .heart-logo {
+        display: none;
+    }
+    &:hover > .heart-full-logo {
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 300ms, transform 300ms 100ms;
+    }
+}
