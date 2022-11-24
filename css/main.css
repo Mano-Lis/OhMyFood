@@ -171,26 +171,53 @@ main img {
   -webkit-animation: cascade 500ms 800ms forwards;
           animation: cascade 500ms 800ms forwards;
 }
-.menu-widget:hover > .pricing {
-  transform: translate(-500%);
+.menu-widget:hover > .checked {
+  width: 20%;
 }
+.menu-widget:hover > .checked > .check-valid {
+  opacity: 1;
+  -webkit-animation: check-circle-reveal 500ms 100ms;
+          animation: check-circle-reveal 500ms 100ms;
+}
+.menu-widget:hover > .menu-widget-infos {
+  width: 70%;
+}
+.menu-widget:hover > .pricing {
+  width: 10%;
+}
+
+.checked {
+  width: 0;
+  right: 0;
+  background-color: #99E2D0;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: right center;
+  transition: width 500ms linear;
+}
+.checked .check-valid {
+  opacity: 0;
+}
+
 .menu-widget-infos {
   width: 90%;
+  margin-left: 3%;
 }
 .menu-widget-infos h3 {
   margin-top: 8px;
-  margin-bottom: 2%;
-  margin-left: 3%;
+  margin-bottom: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-right: 2%;
 }
 .menu-widget-infos h4 {
-  margin-top: 0;
+  margin-top: 2%;
   margin-bottom: 0;
   font-weight: normal;
-  margin-left: 3%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -201,13 +228,17 @@ main img {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-right: 7%;
+  margin-right: 4%;
   margin-bottom: 3%;
 }
 @media (min-width: 768px) {
   .pricing {
     margin-bottom: 4%;
   }
+}
+
+.menu-widget-infos, .pricing {
+  transition: width 500ms;
 }
 
 .btn-command {
@@ -718,5 +749,21 @@ footer span {
   100% {
     opacity: 0;
     transform: scale(0);
+  }
+}
+@-webkit-keyframes check-circle-reveal {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes check-circle-reveal {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=main.css.map */
