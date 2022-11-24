@@ -306,8 +306,8 @@ main img {
   align-items: center;
   z-index: 10;
   background: white;
-  -webkit-animation: page-loading 3s linear forwards;
-          animation: page-loading 3s linear forwards;
+  -webkit-animation: page-loading 2s linear forwards;
+          animation: page-loading 2s linear forwards;
 }
 
 .spinner {
@@ -315,8 +315,8 @@ main img {
   -webkit-background-clip: text;
           background-clip: text;
   background-image: -webkit-linear-gradient(#ff93e1, #a16be0);
-  -webkit-animation: rotating-spinner 1s linear 3;
-          animation: rotating-spinner 1s linear 3;
+  -webkit-animation: rotating-spinner 1s linear 2;
+          animation: rotating-spinner 1s linear 2;
 }
 
 .geoloc {
@@ -614,6 +614,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   font-family: "Roboto";
+  overflow: hidden;
+  -webkit-animation: reveal-scrollbar 2s forwards;
+          animation: reveal-scrollbar 2s forwards;
 }
 @media (min-width: 992px) {
   body {
@@ -749,6 +752,28 @@ footer span {
   100% {
     opacity: 0;
     transform: scale(0);
+  }
+}
+@-webkit-keyframes reveal-scrollbar {
+  0% {
+    overflow: hidden;
+  }
+  90% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
+@keyframes reveal-scrollbar {
+  0% {
+    overflow: hidden;
+  }
+  90% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
   }
 }
 @-webkit-keyframes check-circle-reveal {

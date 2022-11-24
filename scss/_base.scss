@@ -3,7 +3,8 @@ body
     box-sizing: border-box;
     margin: 0;
     font-family: 'Roboto';
-
+    overflow: hidden;
+    animation: reveal-scrollbar 2s forwards;
     @media(min-width: $desktop) {
         max-width: 1400px;
         margin: auto;

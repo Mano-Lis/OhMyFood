@@ -19,12 +19,12 @@
     align-items: center;
     z-index: 10;
     background: white;
-    animation: page-loading 3s linear forwards;
+    animation: page-loading 2s linear forwards;
 }
 
 .spinner {
     @include fa-gradient;
-    animation: rotating-spinner 1s linear 3;
+    animation: rotating-spinner 1s linear 2;
 }
 
 .geoloc
