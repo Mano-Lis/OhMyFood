@@ -190,124 +190,81 @@
     @media(min-width: $desktop) {
         margin-top: 6%;
     }
+
+    .restaurant-widget-box {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (min-width: 992px) {
+            justify-content: center;
+        }
+        .restaurant-widget {
+            box-shadow: 0px 0px 5px rgb(223 212 212);
+            border-radius: 25px;
+            background: white;
+            overflow: hidden;
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 5%;
+            position: relative;
+            
+            img {
+                height: 200px;
+            object-position: 20% 80%;
+            object-fit: cover;
+            width: 100%;
+            }
+
+            @media (min-width: $tablet) {
+                width: 44%;
+                margin-left: 3%;
+                margin-right: 3%;
+            }
+
+            @media (min-width: $desktop) {
+                width: 35%;
+            }
+            .new {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: auto;
+                position: absolute;
+                margin-right: 4%;
+                margin-top: 4%;
+                right: 5%;
+                height: 35px;
+                width: 20%;
+                background-color: $color-tertiary;
+                color: darken($color: $color-tertiary, $amount: 45%);
+            }
+            .restaurant-infos {
+                margin-left: 5%;
+                h3 {
+                margin-top: 4%;
+                margin-bottom: 2%;
+                }
+                h4 {
+                font-weight: normal;
+                margin-top: 0;
+                margin-bottom: 3%;
+                }
+            }
+            .heart-logos {
+                position: absolute;
+                z-index: auto;
+                bottom: 25px;
+                left: 85%;
+                max-width: 32px;
+                @include heart-anim;
+                @include heart-logo-superpose
+            }
+        }
+    }
 }
-
-.restaurant-widget
-{
-    box-shadow: 0px 0px 5px rgb(223 212 212);
-    border-radius: 25px;
-    background: white;
-    overflow: hidden;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    position: relative;
-    
-    img {
-        height: 200px;
-    object-position: 20% 80%;
-    object-fit: cover;
-    width: 100%;
-    }
-
-    @media (min-width: $tablet) {
-        width: 44%;
-        margin-left: 3%;
-        margin-right: 3%;
-    }
-
-    @media (min-width: $desktop) {
-        width: 35%;
-    }
-}
-
-.restaurant-widget-box 
-{
-    display: flex;
-    flex-wrap: wrap;
-
-    @media (min-width: 992px) {
-        justify-content: center;
-    }
-}
-
 
 #vertical-picture img
 {
     object-position: 50% 60%;
 }
-
-.restaurant-infos 
-{
-    margin-left: 5%;
-
-  h3 {
-    margin-top: 4%;
-    margin-bottom: 2%;
-  }
-
-  h4 {
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 3%;
-  }
-}  
-
-.new 
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: auto;
-    position: absolute;
-    margin-right: 4%;
-    margin-top: 4%;
-    right: 5%;
-    height: 35px;
-    width: 20%;
-    background-color: $color-tertiary;
-    color: darken($color: $color-tertiary, $amount: 45%);
-}
-
-
-
-.heart-logos 
-{
-    position: absolute;
-    z-index: auto;
-    bottom: 25px;
-    left: 85%;
-    max-width: 32px;
-    @include heart-anim;
-}
-
-.heart-logos-menu
-{
-    position: relative;
-    margin-right: 5%;
-    @include heart-anim;
-}
-
-.heart-logo
-{
-    display: block;
-    &__menu {
-        position: relative;
-        top: -16px;
-    }
-}
-
-.heart-full-logo
-{
-    display: block;
-    @include fa-gradient;
-    cursor: pointer;
-    opacity: 0;
-    transform: scale(0);
-}
-
-
-
-
-

@@ -67,18 +67,34 @@ main img {
   margin-top: 3%;
   font-size: xx-large;
 }
-
-.heart-logos-menu {
+.restaurant-headers .heart-logos-menu {
   position: relative;
   margin-right: 5%;
 }
-.heart-logos-menu:hover > .heart-logo {
+.restaurant-headers .heart-logos-menu:hover > .heart-logo {
   display: none;
 }
-.heart-logos-menu:hover > .heart-full-logo {
+.restaurant-headers .heart-logos-menu:hover > .heart-full-logo {
   opacity: 1;
   transform: scale(1);
   transition: opacity 300ms, transform 300ms 100ms;
+}
+.restaurant-headers .heart-logos-menu .heart-logo {
+  display: block;
+}
+.restaurant-headers .heart-logos-menu .heart-logo__menu {
+  position: relative;
+  top: -16px;
+}
+.restaurant-headers .heart-logos-menu .heart-full-logo {
+  display: block;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: -webkit-linear-gradient(#ff93e1, #a16be0);
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0);
 }
 
 @media (min-width: 768px) {
@@ -146,11 +162,13 @@ main img {
   border-radius: 20px;
   opacity: 0;
   margin-left: 5%;
+  width: 90%;
 }
 @media (min-width: 768px) {
   .menu-widget {
     margin-bottom: 10%;
     margin-left: 0;
+    width: 100%;
   }
 }
 .menu-widget__first {
@@ -182,16 +200,7 @@ main img {
 .menu-widget .checked .check-valid {
   color: white;
 }
-.menu-widget:hover > .checked {
-  opacity: 1;
-  width: 80px;
-}
-.menu-widget:hover > .checked > .check-valid {
-  -webkit-animation: check-circle-reveal 500ms 100ms;
-          animation: check-circle-reveal 500ms 100ms;
-}
-
-.menu-widget-infos {
+.menu-widget .menu-widget-infos {
   display: flex;
   flex: 1;
   overflow: hidden;
@@ -199,7 +208,13 @@ main img {
   align-items: flex-end;
   padding: 12px;
 }
-.menu-widget-infos h3 {
+.menu-widget .menu-widget-infos .menu-description {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+.menu-widget .menu-widget-infos .menu-description h3 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
@@ -209,7 +224,7 @@ main img {
   text-overflow: ellipsis;
   margin-right: 2%;
 }
-.menu-widget-infos h4 {
+.menu-widget .menu-widget-infos .menu-description h4 {
   margin-top: 5px;
   margin-bottom: 0;
   font-weight: normal;
@@ -218,22 +233,18 @@ main img {
   text-overflow: ellipsis;
   margin-right: 2%;
 }
-
-.menu-description {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  width: 100%;
-}
-
-.pricing {
+.menu-widget .menu-widget-infos .pricing {
   display: flex;
   height: 100%;
   align-items: flex-end;
 }
-
-.menu-widget-infos, .pricing {
-  transition: width 500ms;
+.menu-widget:hover > .checked {
+  opacity: 1;
+  width: 80px;
+}
+.menu-widget:hover > .checked > .check-valid {
+  -webkit-animation: check-circle-reveal 500ms 100ms;
+          animation: check-circle-reveal 500ms 100ms;
 }
 
 .btn-command {
@@ -496,8 +507,16 @@ main img {
     margin-top: 6%;
   }
 }
-
-.restaurant-widget {
+.restaurant-section .restaurant-widget-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+  .restaurant-section .restaurant-widget-box {
+    justify-content: center;
+  }
+}
+.restaurant-section .restaurant-widget-box .restaurant-widget {
   box-shadow: 0px 0px 5px rgb(223, 212, 212);
   border-radius: 25px;
   background: white;
@@ -508,7 +527,7 @@ main img {
   margin-bottom: 5%;
   position: relative;
 }
-.restaurant-widget img {
+.restaurant-section .restaurant-widget-box .restaurant-widget img {
   height: 200px;
   -o-object-position: 20% 80%;
      object-position: 20% 80%;
@@ -517,47 +536,18 @@ main img {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .restaurant-widget {
+  .restaurant-section .restaurant-widget-box .restaurant-widget {
     width: 44%;
     margin-left: 3%;
     margin-right: 3%;
   }
 }
 @media (min-width: 992px) {
-  .restaurant-widget {
+  .restaurant-section .restaurant-widget-box .restaurant-widget {
     width: 35%;
   }
 }
-
-.restaurant-widget-box {
-  display: flex;
-  flex-wrap: wrap;
-}
-@media (min-width: 992px) {
-  .restaurant-widget-box {
-    justify-content: center;
-  }
-}
-
-#vertical-picture img {
-  -o-object-position: 50% 60%;
-     object-position: 50% 60%;
-}
-
-.restaurant-infos {
-  margin-left: 5%;
-}
-.restaurant-infos h3 {
-  margin-top: 4%;
-  margin-bottom: 2%;
-}
-.restaurant-infos h4 {
-  font-weight: normal;
-  margin-top: 0;
-  margin-bottom: 3%;
-}
-
-.new {
+.restaurant-section .restaurant-widget-box .restaurant-widget .new {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -571,45 +561,41 @@ main img {
   background-color: #99E2D0;
   color: #217460;
 }
-
-.heart-logos {
+.restaurant-section .restaurant-widget-box .restaurant-widget .restaurant-infos {
+  margin-left: 5%;
+}
+.restaurant-section .restaurant-widget-box .restaurant-widget .restaurant-infos h3 {
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+.restaurant-section .restaurant-widget-box .restaurant-widget .restaurant-infos h4 {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 3%;
+}
+.restaurant-section .restaurant-widget-box .restaurant-widget .heart-logos {
   position: absolute;
   z-index: auto;
   bottom: 25px;
   left: 85%;
   max-width: 32px;
 }
-.heart-logos:hover > .heart-logo {
+.restaurant-section .restaurant-widget-box .restaurant-widget .heart-logos:hover > .heart-logo {
   display: none;
 }
-.heart-logos:hover > .heart-full-logo {
+.restaurant-section .restaurant-widget-box .restaurant-widget .heart-logos:hover > .heart-full-logo {
   opacity: 1;
   transform: scale(1);
   transition: opacity 300ms, transform 300ms 100ms;
 }
-
-.heart-logos-menu {
-  position: relative;
-  margin-right: 5%;
-}
-.heart-logos-menu:hover > .heart-logo {
-  display: none;
-}
-.heart-logos-menu:hover > .heart-full-logo {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 300ms, transform 300ms 100ms;
-}
-
-.heart-logo {
+.restaurant-section .restaurant-widget-box .restaurant-widget .heart-logos .heart-logo {
   display: block;
 }
-.heart-logo__menu {
+.restaurant-section .restaurant-widget-box .restaurant-widget .heart-logos .heart-logo__menu {
   position: relative;
   top: -16px;
 }
-
-.heart-full-logo {
+.restaurant-section .restaurant-widget-box .restaurant-widget .heart-logos .heart-full-logo {
   display: block;
   color: transparent;
   -webkit-background-clip: text;
@@ -618,6 +604,11 @@ main img {
   cursor: pointer;
   opacity: 0;
   transform: scale(0);
+}
+
+#vertical-picture img {
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
 }
 
 body {

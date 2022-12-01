@@ -70,13 +70,13 @@ main img
         margin-top: 3%;
         font-size: xx-large;
     }
-}
 
-.heart-logos-menu
-{
-    position: relative;
-    margin-right: 5%;
-    @include heart-anim;
+    .heart-logos-menu {
+        position: relative;
+        margin-right: 5%;
+        @include heart-anim;
+        @include heart-logo-superpose;
+    }
 }
 
 .starters-dishes-desserts
@@ -150,9 +150,11 @@ main img
     border-radius: 20px;
     opacity: 0;
     margin-left: 5%;
+    width: 90%;
     @media (min-width: $tablet) {    
         margin-bottom: 10%;
         margin-left: 0;
+        width: 100%;
     }
     
     @each $key, $value in $cascade-anim {
@@ -175,6 +177,40 @@ main img
         }
     }
 
+    .menu-widget-infos {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 12px;
+        .menu-description {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            width: 100%;
+            h3 {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: 16px;
+                font-weight: 600;
+                @include text-overflow;
+            }
+
+            h4 {
+                margin-top: 5px;
+                margin-bottom: 0;
+                font-weight: normal;
+                @include text-overflow;
+            }    
+        }
+        .pricing {
+            display: flex;
+            height: 100%;
+            align-items: flex-end;
+        }
+    }
+
     &:hover > .checked {
         opacity: 1;
         width: 80px;
@@ -183,51 +219,6 @@ main img
         }
     }
 }
-
-.menu-widget-infos
-{
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 12px;
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        font-size: 16px;
-        font-weight: 600;
-        @include text-overflow;
-    }
-
-    h4 {
-        margin-top: 5px;
-        margin-bottom: 0;
-        font-weight: normal;
-        @include text-overflow;
-    }
-}
-
-.menu-description
-{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    width: 100%;
-}
-
-.pricing 
-{
-    display: flex;
-    height: 100%;
-    align-items: flex-end;
-}
-
-
-.menu-widget-infos, .pricing {
-    transition: width 500ms;
-}
-
 
 .btn-command
 {
@@ -243,5 +234,3 @@ main img
         width: 20%;
     }
 }
-
-
