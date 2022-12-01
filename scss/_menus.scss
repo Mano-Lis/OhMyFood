@@ -139,16 +139,14 @@ main img
 }
 
 
+
 .menu-widget
 {
     height: 70px;
+    width: 90%;
     display: flex;
-    justify-content: space-around;
     background-color: white;
     margin-bottom: 3%;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
     box-shadow: 3px 5px 5px rgb(216, 216, 216);
     border-radius: 20px;
     opacity: 0;
@@ -161,68 +159,67 @@ main img
             animation: cascade 500ms $value forwards;
         }
     }
-    &:hover > .checked {
-        width: 20%;
-        &> .check-valid {
-            opacity: 1;
-            animation: check-circle-reveal 500ms 100ms;
+
+    .checked {
+        border-radius: 0 20px 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 0;
+        opacity: 0;
+        transition: width 600ms, opacity 600ms;
+        background-color: $color-tertiary;
+        .check-valid {
+            color: white; 
         }
     }
-    &:hover > .menu-widget-infos {
-        width: 70%;
-    }
-    &:hover > .pricing {
-        width: 10%;
-    }
-    
-    
-}
 
-.checked {
-    width: 0;
-    right: 0;
-    background-color: $color-tertiary;
-    color: white;
-    border-radius: 0 20px 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform-origin: right center;
-    transition: width 500ms linear;
-    .check-valid {
-        opacity: 0;
-        
+    &:hover > .checked {
+        opacity: 1;
+        width: 80px;
+        & > .check-valid {
+            animation: check-circle-reveal 500ms 100ms;
+        }
     }
 }
 
 .menu-widget-infos
 {
-    width: 90%;
-    margin-left: 3%;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 12px;
     h3 {
-        margin-top: 8px;
+        margin-top: 0;
         margin-bottom: 0;
+        font-size: 16px;
+        font-weight: 600;
         @include text-overflow;
     }
 
     h4 {
-        margin-top: 2%;
+        margin-top: 5px;
         margin-bottom: 0;
         font-weight: normal;
         @include text-overflow;
     }
 }
 
-.pricing 
+.menu-description
 {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    margin-right: 4%;
-    margin-bottom: 3%;
-    @media(min-width: $tablet) {
-        margin-bottom: 4%;
-    }
+    overflow: hidden;
+    width: 90%;
+}
+
+.pricing 
+{
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
 }
 
 

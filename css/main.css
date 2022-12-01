@@ -139,13 +139,10 @@ main img {
 
 .menu-widget {
   height: 70px;
+  width: 90%;
   display: flex;
-  justify-content: space-around;
   background-color: white;
   margin-bottom: 3%;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: 3px 5px 5px rgb(216, 216, 216);
   border-radius: 20px;
   opacity: 0;
@@ -171,51 +168,48 @@ main img {
   -webkit-animation: cascade 500ms 800ms forwards;
           animation: cascade 500ms 800ms forwards;
 }
+.menu-widget .checked {
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  opacity: 0;
+  transition: width 600ms, opacity 600ms;
+  background-color: #99E2D0;
+}
+.menu-widget .checked .check-valid {
+  color: white;
+}
 .menu-widget:hover > .checked {
-  width: 20%;
+  opacity: 1;
+  width: 80px;
 }
 .menu-widget:hover > .checked > .check-valid {
-  opacity: 1;
   -webkit-animation: check-circle-reveal 500ms 100ms;
           animation: check-circle-reveal 500ms 100ms;
 }
-.menu-widget:hover > .menu-widget-infos {
-  width: 70%;
-}
-.menu-widget:hover > .pricing {
-  width: 10%;
-}
-
-.checked {
-  width: 0;
-  right: 0;
-  background-color: #99E2D0;
-  color: white;
-  border-radius: 0 20px 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-origin: right center;
-  transition: width 500ms linear;
-}
-.checked .check-valid {
-  opacity: 0;
-}
 
 .menu-widget-infos {
-  width: 90%;
-  margin-left: 3%;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 12px;
 }
 .menu-widget-infos h3 {
-  margin-top: 8px;
+  margin-top: 0;
   margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 600;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-right: 2%;
 }
 .menu-widget-infos h4 {
-  margin-top: 2%;
+  margin-top: 5px;
   margin-bottom: 0;
   font-weight: normal;
   overflow: hidden;
@@ -224,17 +218,17 @@ main img {
   margin-right: 2%;
 }
 
-.pricing {
+.menu-description {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  margin-right: 4%;
-  margin-bottom: 3%;
+  overflow: hidden;
+  width: 90%;
 }
-@media (min-width: 768px) {
-  .pricing {
-    margin-bottom: 4%;
-  }
+
+.pricing {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
 }
 
 .menu-widget-infos, .pricing {
@@ -620,7 +614,7 @@ main img {
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 @media (min-width: 992px) {
   body {
