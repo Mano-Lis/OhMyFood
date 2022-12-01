@@ -103,7 +103,7 @@ main img {
 }
 @media (min-width: 992px) {
   .menu-part {
-    width: 35%;
+    width: 33%;
   }
 }
 
@@ -224,7 +224,7 @@ main img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  width: 90%;
+  width: 100%;
 }
 
 .pricing {
