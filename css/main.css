@@ -86,8 +86,8 @@ main img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-right: 3%;
-    margin-left: 3%;
+    margin-right: 1%;
+    margin-left: 1%;
   }
 }
 @media (min-width: 992px) {
@@ -98,12 +98,12 @@ main img {
 
 @media (min-width: 768px) {
   .menu-part {
-    width: 50%;
+    width: 48%;
   }
 }
 @media (min-width: 992px) {
   .menu-part {
-    width: 33%;
+    width: 31%;
   }
 }
 
@@ -139,7 +139,6 @@ main img {
 
 .menu-widget {
   height: 70px;
-  width: 90%;
   display: flex;
   background-color: white;
   margin-bottom: 3%;
@@ -470,7 +469,6 @@ main img {
     margin-left: 0;
     margin-right: 0;
     width: 30%;
-    justify-content: center;
   }
 }
 
