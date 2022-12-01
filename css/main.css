@@ -146,10 +146,12 @@ main img {
   box-shadow: 3px 5px 5px rgb(216, 216, 216);
   border-radius: 20px;
   opacity: 0;
+  margin-left: 5%;
 }
 @media (min-width: 768px) {
   .menu-widget {
     margin-bottom: 10%;
+    margin-left: 0;
   }
 }
 .menu-widget__first {

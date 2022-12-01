@@ -150,8 +150,10 @@ main img
     box-shadow: 3px 5px 5px rgb(216, 216, 216);
     border-radius: 20px;
     opacity: 0;
+    margin-left: 5%;
     @media (min-width: $tablet) {    
         margin-bottom: 10%;
+        margin-left: 0;
     }
     
     @each $key, $value in $cascade-anim {
