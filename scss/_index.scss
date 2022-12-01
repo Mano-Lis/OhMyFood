@@ -1,3 +1,10 @@
+.container 
+{
+    overflow: hidden;
+    animation: reveal-scrollbar 2s forwards;
+    max-height: 100vh;
+}
+
 .top-container 
 {
     background-color: $color-section-background;

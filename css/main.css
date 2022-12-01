@@ -285,6 +285,13 @@ main img {
   }
 }
 
+.container {
+  overflow: hidden;
+  -webkit-animation: reveal-scrollbar 2s forwards;
+          animation: reveal-scrollbar 2s forwards;
+  max-height: 100vh;
+}
+
 .top-container {
   background-color: #f7f7f7;
   padding-bottom: 10%;
@@ -614,9 +621,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   font-family: "Roboto";
-  overflow: hidden;
-  -webkit-animation: reveal-scrollbar 2s forwards;
-          animation: reveal-scrollbar 2s forwards;
 }
 @media (min-width: 992px) {
   body {
