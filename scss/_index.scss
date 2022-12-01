@@ -150,14 +150,21 @@
     margin-left: 6%;
     margin-right: 4%;
     border-radius: 20px;
-    height: 85px;
+    height: 70px;
     box-shadow: 3px 5px 5px rgb(216, 216, 216);
     background-color: #f9f9f9;
+    font-size: 0.8em;
     &:hover {
         background-color: lighten($color-secondary, 22%);
     }
     &:hover > .working-logos {
         color: $color-primary;
+    }
+    @media(min-width: $desktop) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 30%;
+        justify-content: center;
     }
 }
 
